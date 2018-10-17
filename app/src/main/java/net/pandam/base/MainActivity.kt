@@ -19,13 +19,11 @@ class MainActivity : AppCompatActivity() {
 
     fun initialize(){
 
-        var btn_intro = findViewById(R.id.btn_intro) as Button
+        var btnIntro = findViewById<Button>(R.id.btn_intro)
 
-
-        btn_intro.setOnClickListener {
+        btnIntro.setOnClickListener {
 
             toast("인트로")
-
 
             val intent = Intent(applicationContext, IntroActivity::class.java)
             startActivity(intent)

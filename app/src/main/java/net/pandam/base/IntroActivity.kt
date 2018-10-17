@@ -22,14 +22,14 @@ class IntroActivity : AppCompatActivity() {
     }
 
     fun initialize(){
-        var intro_background = findViewById<FrameLayout>(R.id.intro_background)
+        var introbackground = findViewById<FrameLayout>(R.id.intro_background)
 
-        var intro_content = findViewById<TextView>(R.id.intro_content)
-        intro_content.animate()
+        var introContent = findViewById<TextView>(R.id.intro_content)
+        introContent.animate()
 
         //1
-        val object_animator = ObjectAnimator.ofObject(
-                intro_background,
+        val objectAnimator = ObjectAnimator.ofObject(
+                introbackground,
                 "backgroundColor",
                 ArgbEvaluator(),
                 ContextCompat.getColor(this, R.color.background_from),
@@ -37,14 +37,14 @@ class IntroActivity : AppCompatActivity() {
         )
 
         // 2
-        object_animator.repeatCount = 1
-        object_animator.repeatMode = ValueAnimator.REVERSE
+        objectAnimator.repeatCount = 1
+        objectAnimator.repeatMode = ValueAnimator.REVERSE
 
         // 3
-        object_animator.duration = IntroActivity.Companion.DEFAULT_ANIMATION_DURATION
-        object_animator.start()
+        objectAnimator.duration = 2000L
+        objectAnimator.start()
 
-        run.after(2000, { finish() })
+        run.after(2000) { finish() }
     }
 
     class run {
@@ -55,9 +55,5 @@ class IntroActivity : AppCompatActivity() {
                 }, delay)
             }
         }
-    }
-
-    companion object {
-        val DEFAULT_ANIMATION_DURATION = 2000L
     }
 }
