@@ -1,4 +1,4 @@
-package net.pandam.kotlinlib
+package net.pandam.base
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("net.pandam.kotlinlib", appContext.packageName)
+        assertEquals("net.pandam.base", appContext.packageName)
     }
 }

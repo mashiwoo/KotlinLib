@@ -1,4 +1,4 @@
-package net.pandam.kotlinlib
+package net.pandam.base
 
 import org.junit.Test
 

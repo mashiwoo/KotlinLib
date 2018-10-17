@@ -3,15 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
-    tools:context=".activity.IntroActivity">
+    android:id="@+id/intro_background"
+    tools:context=".IntroActivity">
+
     <TextView
-        android:id="@+id/fullscreen_content"
+        android:id="@+id/intro_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:keepScreenOn="true"
-        android:text="로딩"
-        android:textColor="#000"
-        android:textSize="25sp" />
+        android:text="@string/intro_content"
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
 </FrameLayout>
