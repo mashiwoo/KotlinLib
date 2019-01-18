@@ -21,7 +21,7 @@ class IntroActivity : AppCompatActivity() {
         initialize()
     }
 
-    fun initialize(){
+    private fun initialize(){
         var introbackground = findViewById<FrameLayout>(R.id.intro_background)
 
         var introContent = findViewById<TextView>(R.id.intro_content)
@@ -44,10 +44,10 @@ class IntroActivity : AppCompatActivity() {
         objectAnimator.duration = 2000L
         objectAnimator.start()
 
-        run.after(2000) { finish() }
+        Run.after(2000) { finish() }
     }
 
-    class run {
+    class Run {
         companion object {
             fun after(delay: Long, process: () -> Unit) {
                 Handler().postDelayed({

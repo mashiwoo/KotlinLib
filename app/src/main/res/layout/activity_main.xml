@@ -18,6 +18,12 @@
             android:text="Intro" />
 
         <Button
+            android:id="@+id/btn_webview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="웹뷰" />
+
+        <Button
             android:id="@+id/btn_topmenu"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

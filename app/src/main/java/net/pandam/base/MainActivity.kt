@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import net.pandam.base.activity.WebviewActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,8 +28,16 @@ class MainActivity : AppCompatActivity() {
 
             val intent = Intent(applicationContext, IntroActivity::class.java)
             startActivity(intent)
+        }
 
+        var btnWebview = findViewById<Button>(R.id.btn_webview)
 
+        btnWebview.setOnClickListener {
+
+            toast("웹뷰")
+
+            val intent = Intent(applicationContext, WebviewActivity::class.java)
+            startActivity(intent)
         }
     }
 
